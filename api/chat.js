@@ -33,8 +33,18 @@ async function gemini(key, msgs) {
   }
   return null;
 }
+// Basic per-visitor rate limit (per server instance): 15 messages per 10 minutes.
+const HITS = new Map(), LIMIT = 15, WINDOW = 10 * 60 * 1000;
+function limited(ip) {
+  const now = Date.now(), t = (HITS.get(ip) || []).filter(x => now - x < WINDOW);
+  t.push(now); HITS.set(ip, t);
+  if (HITS.size > 5000) HITS.clear();
+  return t.length > LIMIT;
+}
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'POST only' });
+  const ip = String(req.headers['x-forwarded-for'] || req.socket?.remoteAddress || '').split(',')[0].trim();
+  if (limited(ip)) return res.status(429).json({ error: 'Too many messages. Please wait a few minutes and try again.' });
   const ck = process.env.ANTHROPIC_API_KEY, gk = process.env.GEMINI_API_KEY;
   if (!ck && !gk) return res.status(503).json({ error: 'No AI key set' });
   let msgs = (req.body?.messages || []).slice(-10).map(m => ({
