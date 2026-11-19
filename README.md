@@ -1,4 +1,7 @@
 # Meridian Capital
+
+**Live app: https://meridian-tau-three.vercel.app**
+
 Canadian money guide: life-stage guides, key 2026 figures with sources, CPP timing tool, growth calculator, demo advisor booking, 3D globe, and a Gemini-powered assistant.
 
 ## Pages
@@ -31,5 +34,8 @@ git push -u origin main
 4. Open the chat bubble: the header shows which AI and model answered.
 Never put keys in code or commit `.env`.
 
-## Local
-`npx vercel dev`
+## Open the app
+Just open **https://meridian-tau-three.vercel.app** in any browser and bookmark it. No commands needed.
+
+## Local (optional, for development only)
+`npx vercel dev`, then open http://localhost:3000
