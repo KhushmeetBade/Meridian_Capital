@@ -23,3 +23,68 @@ D.cpi=[['Jan 2026',2.3],['Feb 2026',1.8],['May 2026',3.2],['Aug 2026',3.0],['Sep
 D.tax=[['First $58,523','14%'],['$58,523 to $117,045','20.5%'],['$117,045 to $181,440','26%'],['$181,440 to $258,482','29%'],['Over $258,482','33%']];
 D.nums.push(['3.1%','Canada inflation, Oct 2026','Year-over-year CPI, unchanged from September. Excluding energy it was 2.0%.','Statistics Canada','https://www150.statcan.gc.ca/n1/en/type/data'],['$16,452','Federal basic personal amount','Income you can earn before federal tax in 2026. The lowest federal rate fell to 14%.','CRA','https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html']);
 D.refs.push(['Statistics Canada CPI','Monthly inflation releases.','https://www150.statcan.gc.ca/n1/dai-quotidien/index-eng.htm'],['CRA income tax rates','Federal brackets and basic personal amount.','https://www.canada.ca/en/revenue-agency/services/tax/individuals/frequently-asked-questions-individuals/canadian-income-tax-rates-individuals-current-previous-years.html']);
+
+// ---- Added Nov 2026: more ETFs, figures, glossary, lessons, safety, stocks, goals (figures verified against official pages) ----
+D.etf.push(
+['XUS','iShares Core S&P 500 Index ETF','US equity','≈0.09%',0.09,'Tracks the S&P 500, giving diversified exposure to large US companies.'],
+['VDY','Vanguard FTSE Canadian High Dividend Yield','Dividend','≈0.22%',0.22,'Canadian companies with relatively high dividend yields, paying regular distributions.'],
+['XDIV','iShares Core MSCI Canadian Quality Dividend','Dividend','≈0.11%',0.11,'Canadian companies chosen for dividend quality and financial strength.'],
+['CASH','Global X High Interest Savings ETF','Cash','≈0.11%',0.11,'Holds Canadian bank deposit accounts and pays monthly interest. Not CDIC-insured.'],
+['XSEM','iShares ESG Aware MSCI Emerging Markets','International','≈0.33%',0.33,'Emerging-market stocks with environmental, social and governance screens.'],
+['XQQ','iShares NASDAQ 100 Index ETF (CAD-Hedged)','US equity','≈0.39%',0.39,'Tracks the NASDAQ-100, heavy in large tech and growth companies, hedged to the Canadian dollar.'],
+['XGRO','iShares Core Growth ETF Portfolio','All-in-one','≈0.20%',0.20,'About 80% global stocks and 20% bonds in one fund for long-term growth.'],
+['XEC','iShares Core MSCI Emerging Markets IMI','International','≈0.28%',0.28,'Broad exposure to large, mid and small companies in emerging markets.'],
+['XSB','iShares Core Canadian Short Term Bond','Bonds','≈0.10%',0.10,'Short-term Canadian investment-grade bonds, less sensitive to interest-rate changes.'],
+['XBAL','iShares Core Balanced ETF Portfolio','All-in-one','≈0.20%',0.20,'About 60% global stocks and 40% bonds, balancing growth and stability.']);
+{const o=['VFV','XEQT','XIC','ZSP','XEF','VGRO','ZAG','XUS','VCN','XQQ','VEQT','XBB','XGRO','CASH','XSB','XUU','VAB','VDY','XBAL','XEI','XEC','XDIV','XSEM'];D.etf.sort((a,b)=>o.indexOf(a[0])-o.indexOf(b[0]))}
+D.nums.push(
+['$1,138.90','Max GIS, single','Monthly Guaranteed Income Supplement, Oct–Dec 2026, for a single OAS recipient. Depends on income.','ESDC','https://www.canada.ca/en/employment-social-development/programs/pensions/pension/statistics/2026-quarterly-october-december.html'],
+['$95,323','OAS clawback threshold 2026','OAS recovery tax starts when 2026 net income is above this amount.','Canada.ca','https://www.canada.ca/en/services/benefits/publicpensions/cpp/old-age-security/recovery-tax.html'],
+['$8,157','Max Canada Child Benefit','Per child under 6, per year (July 2026–June 2027). $6,883 for ages 6–17.','CRA','https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-much.html'],
+['$68,900','EI maximum insurable earnings','2026 cap. Employees outside Quebec pay $1.63 per $100 earned, up to $1,123.07.','ESDC','https://www.canada.ca/en/employment-social-development/programs/ei/ei-list/ei-employers/premium-reduction-program/2026-maximum-insurable-earnings.html'],
+['5.95%','CPP contribution rate','Employee rate on earnings up to $74,600 in 2026 (after a $3,500 exemption). Employers match it.','CRA','https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html'],
+['5.28%','RRIF minimum at age 71','The minimum share of a RRIF you must withdraw each year rises with age.','CRA','https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/completing-slips-summaries/t4rsp-t4rif-information-returns/payments/minimum-amount-a-rrif.html']);
+D.gloss.push(
+['Volatility','How much an investment’s price moves up and down over time.'],
+['Liquidity','How easily an asset can be turned into cash without hurting its value.'],
+['Principal','The original amount deposited, borrowed or invested, before interest, gains or losses.'],
+['Yield','The income an investment pays relative to its price, shown as a percentage.'],
+['Capital loss','The loss when an investment is sold for less than its adjusted cost.'],
+['Limit order','An instruction to buy or sell only at a set price or better.'],
+['Market order','An instruction to buy or sell right away at the best available price.'],
+['Bid-ask spread','The gap between the highest price buyers offer and the lowest price sellers accept.'],
+['Index','A measure that tracks a group of investments representing a market, like the S&P/TSX Composite.'],
+['Benchmark','An index or standard used to judge how well an investment performed.'],
+['Risk tolerance','Your ability and willingness to handle investment swings and possible losses.'],
+['Time horizon','How long you expect to keep money invested before you need it.'],
+['Tax-loss selling','Selling an investment at a loss in a taxable account to offset capital gains, subject to CRA rules.']);
+D.lessons.push(
+['Understand your credit score','Canadian credit scores depend on payment history, how much of your credit you use, account age, credit mix and recent applications. Pay on time, keep balances low and check your Equifax and TransUnion reports for errors.'],
+['Avoid debt traps','High-interest credit cards, payday loans and minimum-only payments make borrowing expensive fast. Know the rate, fees and repayment schedule before borrowing, and pay off the costliest debt first.'],
+['Rent vs buy','Owning costs more than the mortgage: property tax, insurance, maintenance and closing costs all add up. Renting gives flexibility; buying builds equity but ties a lot of money to one property.'],
+['Taxes on investments','In a non-registered account, interest, dividends and capital gains are taxed differently, and gains are usually taxed when you sell. TFSAs and RRSPs have their own rules.'],
+['RRSP or TFSA?','An RRSP gives a deduction now and taxes withdrawals later; a TFSA gives no deduction but growth and withdrawals are tax-free. Compare your tax rate today with what you expect in retirement.'],
+['Spousal RRSPs','One spouse contributes using their own RRSP room while the other owns the account, which can split retirement income. Withdrawals within three years of a contribution may be taxed to the contributor.']);
+D.safe.push(
+['Fake CRA calls','Scammers pose as the CRA, threaten arrest or promise refunds. The CRA never demands payment by gift card or crypto; check through CRA My Account.'],
+['Crypto scams','Promises of guaranteed crypto returns or pressure to deposit fast are red flags. Crypto is not covered by CDIC.'],
+['Romance scams','Someone you meet online builds trust, then pitches an investment or asks for money. Never send money to someone you haven’t verified.'],
+['Phishing','Texts and emails imitating banks, couriers or the government link to fake login pages. Go to the official website or app instead of tapping links.'],
+['Fake advisors and platforms','Polished websites and guaranteed returns can hide fraud. Check any advisor or firm on the CSA National Registration Search before investing.']);
+D.stock.push(
+['What is the P/E ratio?','Price-to-earnings compares the share price with earnings per share. It shows what the market pays for each dollar of profit, but alone it does not tell you if a stock is cheap or expensive.'],
+['What is market cap?','Share price times shares outstanding: the total market value of a company. It helps compare company sizes.'],
+['What is a stock split?','A company issues more shares and the price drops in proportion, so your total value stays the same. A split does not make the company worth more.'],
+['ETFs vs individual stocks','A stock is a piece of one company; an ETF holds many securities in one purchase. ETFs spread risk, while single stocks tie you to one business.'],
+['Buying US stocks from Canada','Most Canadian brokerages let you buy US-listed stocks and ADRs. Currency conversion, withholding tax and account type all affect your results.'],
+['Foreign withholding tax','Other countries may withhold tax on dividends paid to Canadians, often 15% on US dividends. US dividends in an RRSP are usually exempt under the tax treaty; in a TFSA they are not.']);
+Object.assign(D.goals,{
+'Save for a car':'For a short-term goal, use a TFSA holding savings or GICs rather than stocks, so the money is there when you need it.',
+'Invest as a newcomer':'A TFSA once you are a resident with a SIN (room starts the year you become a resident), or an RRSP once you have Canadian earned income.',
+'Plan for a disability':'An RDSP, if the beneficiary qualifies for the Disability Tax Credit. It can attract government grants and bonds.',
+'Save tax-free for my kids’ future':'An RESP for post-secondary education, which gets the 20% CESG grant. A TFSA adds flexible savings but no grant.'});
+D.cpi.push(['Jun 2026',2.8],['Jul 2026',3.0]);
+{const M='JanFebMarAprMayJunJulAugSepOctNovDec',m=s=>+s.slice(4)*12+M.indexOf(s.slice(0,3))/3;D.cpi.sort((a,b)=>m(a[0])-m(b[0]))}
+D.refs.push(
+['ESDC / CRA benefits','GIS, Canada Child Benefit and EI figures.','https://www.canada.ca/en/revenue-agency/services/child-family-benefits/canada-child-benefit/how-much.html'],
+['CRA payroll','CPP contribution rates and RRIF minimums.','https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/payroll/payroll-deductions-contributions/canada-pension-plan-cpp/cpp-contribution-rates-maximums-exemptions.html']);
